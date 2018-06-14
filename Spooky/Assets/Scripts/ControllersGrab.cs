@@ -45,5 +45,61 @@ public class ControllersGrab : MonoBehaviour {
             }
         }
     }
+    void Update()
+    {
+        if (Controller.GetHairTriggerDown())
+        {
+            CheckForInteractionObject();
+        }
+
+        if (Controller.GetHairTrigger())
+        {
+            if (objectBeingInteractedWith)
+            {
+                objectBeingInteractedWith.OnTriggerIsBeingPressed(this);
+            }
+        }
+
+        if (Controller.GetHairTriggerUp())
+        {
+            if (objectBeingInteractedWith)
+            {
+                objectBeingInteractedWith.OnTriggerWasReleased(this);
+                objectBeingInteractedWith = null;
+            }
+        }
+    }
+
+    private void UpdateVelocity()
+    {
+        velocity = Controller.velocity;
+        angularVelocity = Controller.angularVelocity;
+    }
+
+    void FixedUpdate()
+    {
+        UpdateVelocity();
+    }
+
+    public void HideControllerModel()
+    {
+        ControllerModel.SetActive(false);
+    }
+
+    public void ShowControllerModel()
+    {
+        ControllerModel.SetActive(true);
+    }
+
+    public void Vibrate(ushort strength)
+    {
+        Controller.TriggerHapticPulse(strength);
+    }
+
+    public void SwitchInteractionObjectTo(ObjectsGrab interactionObject) 
+    {
+        objectBeingInteractedWith = interactionObject;
+        objectBeingInteractedWith.OnTriggerWasPressed(this);
+    }
 
 }
