@@ -7,7 +7,7 @@ public class Flashlight : MonoBehaviour {
     public SteamVR_TrackedController tc;
     public Light flashlight;
 
-    void Update()
+    void Start()
     {
         tc.PadClicked += SwitchOnOff;
     }
