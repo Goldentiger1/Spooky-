@@ -17,10 +17,19 @@ public class WindowMonster : MonoBehaviour {
 
     void Update()
     {
-        float movement = speed * t.gameTimer;
         moveDirection = new Vector3(-0.98f, 2.5f, -3.761f);
         startPosition = new Vector3(3.73f, 2.5f, -3.761f);
-        windowMonster.position = Vector3.MoveTowards(windowMonster.position, moveDirection, movement);
+        if (t.gameTimer > 10){
+            float timeNow = t.gameTimer;
+            if (Vector3.Distance(windowMonster.position, moveDirection) > 0.1f){
+                speed += 0.1f;
+                if (Vector3.Distance(windowMonster.position, moveDirection) == 0.1f){
+                    speed = 0;
+                }
+            }
+            float movement = speed * t.gameTimer;
+            windowMonster.position = Vector3.MoveTowards(windowMonster.position, moveDirection, movement);
+        }
     }
 
 
