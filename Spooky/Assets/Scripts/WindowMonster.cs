@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class WindowMonster : MonoBehaviour {
     Timer t;
-    public float speed = 1f;
+    public float speed;
     private Transform windowMonster;
     public Vector3 moveDirection;
     public Vector3 startPosition;
@@ -12,6 +12,7 @@ public class WindowMonster : MonoBehaviour {
     void Start()
     {
         windowMonster = GameObject.Find("FirstEnemy").transform;
+        t = GameObject.Find("Timer").GetComponent<Timer>();
     }
 
     void Update()
