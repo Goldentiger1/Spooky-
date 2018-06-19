@@ -6,7 +6,7 @@ public class WindowMonster : MonoBehaviour {
     public float speed;
     private float speedMultiplier = 1f;
     private Transform windowMonster;
-    public Vector3 moveDirection;
+    public List<Vector3> waypoints; 
     public Vector3 startPosition;
     public float time;
     public float wait;
@@ -15,6 +15,7 @@ public class WindowMonster : MonoBehaviour {
     {
         windowMonster = GameObject.Find("FirstEnemy").transform;
         wait = 60;
+        //waypoints.Add()
     }
 
     void Update()
