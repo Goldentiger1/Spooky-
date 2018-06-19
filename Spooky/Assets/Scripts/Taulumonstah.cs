@@ -8,7 +8,7 @@ public class Taulumonstah : MonoBehaviour {
 
 
 	// Use this for initialization
-	void Start () {		
+	void Start () { 
 	}
 	
 	// Update is called once per frame
