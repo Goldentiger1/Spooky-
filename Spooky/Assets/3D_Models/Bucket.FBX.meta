@@ -1,16 +1,22 @@
 fileFormatVersion: 2
-guid: 39dad374f80f940479bf7c6e660f62cc
+guid: ea8f7f433b3016d46a6f7d0e0451ecea
 ModelImporter:
   serializedVersion: 22
   fileIDToRecycleName:
     100000: //RootNode
     400000: //RootNode
+    2100000: No Name
     2300000: //RootNode
     3300000: //RootNode
-    4300000: Cube.007
-  externalObjects: {}
+    4300000: Cylinder001
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: No Name
+    second: {fileID: 2100000, guid: 458bfe7e01ecbf7469a49f549761597c, type: 2}
   materials:
-    importMaterials: 0
+    importMaterials: 1
     materialName: 0
     materialSearch: 1
     materialLocation: 1
@@ -39,7 +45,7 @@ ModelImporter:
     isReadable: 1
   meshes:
     lODScreenPercentages: []
-    globalScale: 1
+    globalScale: 0.2
     meshCompression: 0
     addColliders: 0
     importVisibility: 1
@@ -64,7 +70,7 @@ ModelImporter:
     normalImportMode: 0
     tangentImportMode: 3
     normalCalculationMode: 4
-  importAnimation: 0
+  importAnimation: 1
   copyAvatar: 0
   humanDescription:
     serializedVersion: 2
