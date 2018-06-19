@@ -3,29 +3,68 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class WindowMonster : MonoBehaviour {
-    public float speed;
-    private float speedMultiplier = 1f;
-    private Transform windowMonster;
-    public List<Vector3> waypoints; 
+
+    public List<float> wait;
+    public List<Vector3> waypoints;
+
+    public float speed;        
     public Vector3 startPosition;
     public float time;
-    public float wait;
+    public float time2;
+
+    private float speedMultiplier = 1f;
+    private Transform windowMonster;
+    private float waitTime;
+    private bool doOnce;
+
+    private Vector3 p1 = new Vector3(1.651f, 2.5f, -3.761f);
+    private Vector3 p2 = new Vector3(-0.1f, 2.5f, -3.761f);
+    private Vector3 p3 = new Vector3(-0.921f, 2.5f, -3.761f);
+    private Vector3 p4 = new Vector3(-0.921f, 2.5f, -2.168f);
+    private Vector3 p5 = new Vector3(-0.921f, 0.62f, -2.168f);
+    private Vector3 p6 = new Vector3(-1.71f, 0.62f, -2.168f);
+    private Vector3 p7 = new Vector3(1.651f, 2.5f, -3.761f);
+
+    void Awake()
+    {
+        wait.Add(10);
+        wait.Add(5);
+        wait.Add(3);
+        wait.Add(1);
+        wait.Add(1);
+
+        waypoints.Add(p1);
+        waypoints.Add(p2);
+        waypoints.Add(p3);
+        waypoints.Add(p4);
+        waypoints.Add(p5);
+        waypoints.Add(p6);
+    }
 
     void Start()
     {
         windowMonster = GameObject.Find("FirstEnemy").transform;
-        wait = 60;
-        //waypoints.Add()
+        doOnce = false;
     }
 
     void Update()
     {
         time += Time.deltaTime;
-        if(time > wait)
+        time2 += Time.deltaTime;
+        while (time2 > 10)
         {
-            time -= wait;
-            wait = 15;
+            for(int i = 0; i < wait.Count; i++)
+            {
+                waitTime = wait[i];
+            }
+            time2 -= 10;
         }
+        
+        if(time > waitTime)
+        {
+
+        }
+        print(waitTime);
     }
 
     /*
