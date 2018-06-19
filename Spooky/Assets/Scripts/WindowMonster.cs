@@ -51,13 +51,14 @@ public class WindowMonster : MonoBehaviour {
     {
         time += Time.deltaTime;
         time2 += Time.deltaTime;
-        while (time2 > 10)
+        foreach(float w in wait)
         {
-            for(int i = 0; i < wait.Count; i++)
+            while(time2 > 10)
             {
-                waitTime = wait[i];
+                print(w);
+                wait.RemoveAt(0);
+                time2 -= 10;
             }
-            time2 -= 10;
         }
         
         if(time > waitTime)
