@@ -327,39 +327,6 @@ Prefab:
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: d81a1497eb00a1b41b91ac999c26df23, type: 2}
   m_IsPrefabParent: 0
---- !u!21 &84502377
-Material:
-  serializedVersion: 6
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_Name: Sprites/Default
-  m_Shader: {fileID: 10753, guid: 0000000000000000f000000000000000, type: 0}
-  m_ShaderKeywords: 
-  m_LightmapFlags: 4
-  m_EnableInstancingVariants: 0
-  m_DoubleSidedGI: 0
-  m_CustomRenderQueue: -1
-  stringTagMap: {}
-  disabledShaderPasses: []
-  m_SavedProperties:
-    serializedVersion: 3
-    m_TexEnvs:
-    - _AlphaTex:
-        m_Texture: {fileID: 0}
-        m_Scale: {x: 1, y: 1}
-        m_Offset: {x: 0, y: 0}
-    - _MainTex:
-        m_Texture: {fileID: 0}
-        m_Scale: {x: 1, y: 1}
-        m_Offset: {x: 0, y: 0}
-    m_Floats:
-    - PixelSnap: 0
-    - _EnableExternalAlpha: 0
-    m_Colors:
-    - _Color: {r: 1, g: 1, b: 1, a: 1}
-    - _Flip: {r: 1, g: 1, b: 1, a: 1}
-    - _RendererColor: {r: 1, g: 1, b: 1, a: 1}
 --- !u!1 &94458718
 GameObject:
   m_ObjectHideFlags: 0
@@ -10923,7 +10890,7 @@ GameObject:
   - component: {fileID: 1188876998}
   - component: {fileID: 1188876997}
   m_Layer: 0
-  m_Name: Ovi Kaksi
+  m_Name: Door One
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -11105,7 +11072,7 @@ Prefab:
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: e986953473aeb17468e0eddef5fcce30, type: 2}
   m_IsPrefabParent: 0
---- !u!43 &1632290227
+--- !u!43 &1564918371
 Mesh:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
@@ -11858,12 +11825,12 @@ Prefab:
         type: 2}
       propertyPath: m_Materials.Array.data[0]
       value: 
-      objectReference: {fileID: 84502377}
+      objectReference: {fileID: 2135433193}
     - target: {fileID: 33601691223991090, guid: 8dd22fb9b55be184e86376de0b08858d,
         type: 2}
       propertyPath: m_Mesh
       value: 
-      objectReference: {fileID: 1632290227}
+      objectReference: {fileID: 1564918371}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 8dd22fb9b55be184e86376de0b08858d, type: 2}
   m_IsPrefabParent: 0
@@ -11878,7 +11845,7 @@ GameObject:
   - component: {fileID: 2102502813}
   - component: {fileID: 2102502812}
   m_Layer: 0
-  m_Name: Ovi Yksi
+  m_Name: Door Two
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -11942,3 +11909,36 @@ MeshFilter:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 2102502810}
   m_Mesh: {fileID: 4300008, guid: 887de9f28808d0d4a91fbc52e9ec155c, type: 3}
+--- !u!21 &2135433193
+Material:
+  serializedVersion: 6
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_Name: Sprites/Default
+  m_Shader: {fileID: 10753, guid: 0000000000000000f000000000000000, type: 0}
+  m_ShaderKeywords: 
+  m_LightmapFlags: 4
+  m_EnableInstancingVariants: 0
+  m_DoubleSidedGI: 0
+  m_CustomRenderQueue: -1
+  stringTagMap: {}
+  disabledShaderPasses: []
+  m_SavedProperties:
+    serializedVersion: 3
+    m_TexEnvs:
+    - _AlphaTex:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _MainTex:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    m_Floats:
+    - PixelSnap: 0
+    - _EnableExternalAlpha: 0
+    m_Colors:
+    - _Color: {r: 1, g: 1, b: 1, a: 1}
+    - _Flip: {r: 1, g: 1, b: 1, a: 1}
+    - _RendererColor: {r: 1, g: 1, b: 1, a: 1}
