@@ -43,6 +43,7 @@ public class WindowMonster : MonoBehaviour
     void Start()
     {
         windowMonster = GameObject.Find("FirstEnemy").transform;
+        startPosition = windowMonster.transform.position;
 
     }
 
