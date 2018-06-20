@@ -11,6 +11,7 @@ public class ClosetMonster : MonoBehaviour
     public float speed;
     private float speedMultiplier = 1f;
     public Vector3 startingPosition;
+    public int startToMove = 10;
 
     private void Start()
     {
@@ -20,7 +21,7 @@ public class ClosetMonster : MonoBehaviour
     void Update()
     {
         time += Time.deltaTime;
-        if (time > 10)
+        if (time > startToMove)
         {
             if (Vector3.Distance(closetMonster.position, moveDirection) > 0.1f)
             {
@@ -42,6 +43,7 @@ public class ClosetMonster : MonoBehaviour
         {
             transform.position = startingPosition;
             time = 0;
+            startToMove -= 1;
         }
     }
 }
