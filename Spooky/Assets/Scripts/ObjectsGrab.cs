@@ -6,10 +6,12 @@ public class ObjectsGrab : MonoBehaviour {
     protected Transform cachedTransform;
     [HideInInspector]
     public ControllersGrab currentController;
+    public string grab;
 
     public virtual void OnTriggerWasPressed(ControllersGrab controller)
     {
         currentController = controller;
+        Fabric.EventManager.Instance.PostEvent(grab);
     }
 
     public virtual void OnTriggerIsBeingPressed(ControllersGrab controller)
