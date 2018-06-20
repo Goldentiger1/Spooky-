@@ -9,6 +9,7 @@ public class Lightbulb : MonoBehaviour {
     public Light lightbulbLight;
     public float originPos;
     public float triggerDistance;
+    public string lamp;
 
     private void Start()
     {
@@ -23,6 +24,7 @@ public class Lightbulb : MonoBehaviour {
         
         if(transform.position.y < originPos - triggerDistance)
         {
+            Fabric.EventManager.Instance.PostEvent(lamp);
             lightbulbLight.enabled = true; //!enabled;
         }
     }

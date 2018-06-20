@@ -7,6 +7,7 @@ public class Flashlight : MonoBehaviour {
     public SteamVR_TrackedController tc;
     public Light flashlight;
     Rayhit r;
+    public string light;
 
     void Start()
     {
@@ -18,6 +19,6 @@ public class Flashlight : MonoBehaviour {
     {
         flashlight.enabled = !flashlight.enabled;
         r.enabled = !r.enabled;
-
+        Fabric.EventManager.Instance.PostEvent(light);
     }
 }
