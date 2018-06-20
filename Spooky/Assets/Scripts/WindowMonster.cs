@@ -53,19 +53,22 @@ public class WindowMonster : MonoBehaviour {
         time2 += Time.deltaTime;
         foreach(float w in wait)
         {
+            print(w);
+            /*
             while(time2 > 10)
             {
                 print(w);
                 wait.RemoveAt(0);
                 time2 -= 10;
             }
+            */
         }
         
         if(time > waitTime)
         {
 
         }
-        print(waitTime);
+        //print(waitTime);
     }
 
     /*
