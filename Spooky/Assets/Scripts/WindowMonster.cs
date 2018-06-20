@@ -11,26 +11,24 @@ public class WindowMonster : MonoBehaviour
     public float speed;
     public Vector3 startPosition;
 
-    private Transform windowMonster;
+    public Transform windowMonster;
     private int waitTime = 0;
     public float waitTimer = 0;
 
-    private int currentWaypoint = 0;
+    public int currentWaypoint = 0;
 
-    private Vector3 p1 = new Vector3(1.651f, 2.5f, -3.761f);
-    private Vector3 p2 = new Vector3(-0.1f, 2.5f, -3.761f);
-    private Vector3 p3 = new Vector3(-0.921f, 2.5f, -3.761f);
-    private Vector3 p4 = new Vector3(-0.921f, 2.5f, -2.168f);
-    private Vector3 p5 = new Vector3(-0.921f, 0.62f, -2.168f);
-    private Vector3 p6 = new Vector3(-1.71f, 0.62f, -2.168f);
-    private Vector3 p7 = new Vector3(1.651f, 2.5f, -3.761f);
+    private Vector3 p1 = new Vector3(0.941f, 2.096f, -3.251f);
+    private Vector3 p2 = new Vector3(-0.099f, 2.096f, -3.251f);
+    private Vector3 p3 = new Vector3(0.063f, 1.727f, -1.63f);
+    private Vector3 p4 = new Vector3(0.063f, 0.329f, -1.63f);
+    private Vector3 p5 = new Vector3(0.063f, 0.329f, -1.168f);
 
     void Awake()
     {
+        wait.Add(15);
         wait.Add(10);
         wait.Add(5);
         wait.Add(3);
-        wait.Add(1);
         wait.Add(1);
 
         waitTimer = wait[0];
@@ -40,7 +38,6 @@ public class WindowMonster : MonoBehaviour
         waypoints.Add(p3);
         waypoints.Add(p4);
         waypoints.Add(p5);
-        waypoints.Add(p6);
     }
 
     void Start()
