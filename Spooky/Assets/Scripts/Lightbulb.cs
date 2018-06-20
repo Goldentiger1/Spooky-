@@ -12,7 +12,7 @@ public class Lightbulb : MonoBehaviour {
 
     private void Start()
     {
-        lightbulbLight = GameObject.Find("Sphere").GetComponent<Light>();
+        lightbulbLight = GameObject.Find("LightSource").GetComponent<Light>();
         originPos = transform.position.y;
     }
 
