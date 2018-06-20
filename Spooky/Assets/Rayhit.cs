@@ -6,6 +6,7 @@ public class Rayhit : MonoBehaviour {
 
     public Transform pointLight;
     public WindowMonster monster;
+    public string spook;
 
     void Start() {
         pointLight = GetComponent<Transform>();
@@ -17,6 +18,7 @@ public class Rayhit : MonoBehaviour {
         RaycastHit hitInfo;
         if (Physics.Raycast(pointLight.position, pointLight.forward, out hitInfo)) {
             if (hitInfo.collider.tag == "Monster") {
+                Fabric.EventManager.Instance.PostEvent(spook);
                 monster.windowMonster.transform.position = monster.startPosition;
                 monster.currentWaypoint = 0;
             }
