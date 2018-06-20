@@ -12,10 +12,14 @@ public class ClosetMonster : MonoBehaviour
     private float speedMultiplier = 1f;
     public Vector3 startingPosition;
     public int startToMove = 10;
+    public Transform door1;
+    public Transform door2;
 
     private void Start()
     {
         startingPosition = transform.position;
+        door1 = GameObject.Find("Sarana").GetComponent<Transform>();
+        door2 = GameObject.Find("SaranaKaksi").GetComponent<Transform>();
     }
 
     void Update()
@@ -26,6 +30,8 @@ public class ClosetMonster : MonoBehaviour
             if (Vector3.Distance(closetMonster.position, moveDirection) > 0.1f)
             {
                 speed = 0.001f;
+                door1.Rotate(new Vector3(0, 0.05f, 0), Space.Self);
+                door2.Rotate(new Vector3(0, -0.05f, 0), Space.Self);
                 if (Vector3.Distance(closetMonster.position, moveDirection) == 0.1f)
                 {
                     speed = 0;
