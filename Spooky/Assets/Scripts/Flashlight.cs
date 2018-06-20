@@ -11,6 +11,7 @@ public class Flashlight : MonoBehaviour {
     void Start()
     {
         tc.PadClicked += SwitchOnOff;
+        r = GetComponentInChildren<Rayhit>();
     }
 
     public void SwitchOnOff(object sender, ClickedEventArgs e)

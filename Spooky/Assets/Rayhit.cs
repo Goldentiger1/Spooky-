@@ -7,6 +7,11 @@ public class Rayhit : MonoBehaviour {
     public Transform pointLight;
     public WindowMonster monster;
 
+    void Start() {
+        pointLight = GetComponent<Transform>();
+        monster = GameObject.FindGameObjectWithTag("Monster").GetComponent<WindowMonster>();
+    }
+
 
     void Update() {
         RaycastHit hitInfo;
