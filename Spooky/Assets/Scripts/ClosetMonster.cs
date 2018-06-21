@@ -14,6 +14,7 @@ public class ClosetMonster : MonoBehaviour
     public int startToMove = 10;
     public Transform door1;
     public Transform door2;
+    public string closet;
 
     private void Start()
     {
@@ -32,6 +33,7 @@ public class ClosetMonster : MonoBehaviour
                 speed = 0.001f;
                 door1.Rotate(new Vector3(0, 0.05f, 0), Space.Self);
                 door2.Rotate(new Vector3(0, -0.05f, 0), Space.Self);
+                Fabric.EventManager.Instance.PostEvent(closet);
                 if (Vector3.Distance(closetMonster.position, moveDirection) == 0.1f)
                 {
                     speed = 0;
