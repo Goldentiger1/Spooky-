@@ -4,4 +4,8 @@
 EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
-  m_Scenes: []
+  m_Scenes:
+  - enabled: 1
+    path: Assets/Scenes/Yhteinen2.unity
+    guid: 3e98c9f1bcc499d438c576a654077737
+  m_configObjects: {}
